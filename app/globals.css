@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer{
+    html, 
+    body{
+        height: 100%;
+        padding: 20px;
+        color: #727272;
+    }
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu li{
+    
+}
