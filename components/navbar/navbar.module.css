@@ -3,11 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
 }
 
 .logo{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
+    color: black;
     
 }
 
@@ -15,4 +17,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.link{
+    font-size: 17px;
+    font-weight: 300;
 }

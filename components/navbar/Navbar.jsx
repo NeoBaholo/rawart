@@ -7,17 +7,17 @@ import styles from './navbar.module.css'
 const links =[
     {
         id:1,
-        title:"Artworks",
+        title:"ARTWORKS",
         url:"/artworks",
     },
     {
         id:2,
-        title:"About",
+        title:"ABOUT",
         url:"/about",
     },
     {
         id:3,
-        title:"Contact",
+        title:"CONTACT",
         url:"/contact",
     },
 ];
