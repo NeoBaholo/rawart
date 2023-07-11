@@ -3,3 +3,25 @@
     align-items: center;
     gap: 100px;
 }
+
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+.item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
