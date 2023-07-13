@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+button, [type='button'], [type='reset'], [type='submit'] {
+    background-color: hsla(43, 4%, 64%, 1);
+}
+
 @layer{
-    html, 
-    body{
+    html{
         color: #727272;
+        padding: 35px;
     }
 }
 
@@ -25,15 +29,36 @@ label, input, textarea{
     display: block;
 }
 
-input, textarea{
+input{
     border: 0.1px solid #d0d0d0;;
     width: 100%;
     border-radius: 5px;
-    height: 40px;
+    height: 45px;
+    margin-top: 5px;
+}
+
+textarea{
+    border: 0.1px solid #d0d0d0;;
+    width: 100%;
+    border-radius: 5px;
+    min-height: 180px;
     margin-top: 5px;
 }
 
 label{
     font-weight: 200;
 }
+
+button{
+    height: 45px;
+}
+
+.heading{
+    font-size: 30px;
+}
+
+input ::placeholder{
+    padding-left: 10px;
+}
+
 

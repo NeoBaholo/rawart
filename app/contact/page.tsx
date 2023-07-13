@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from './page.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const contact = () => {
   return (
@@ -12,10 +14,15 @@ const contact = () => {
           <h1 className='text-5xl font-light'>CONTACT US</h1>
           <p>info@rawrisangart.com</p>
           <p>Johannesburg, South Africa</p>
-          <div>Instagram</div>
+          <div className={styles.icons}>
+            <Link href="https://www.instagram.com/rawrisang/"><Image src="/Instagram.png" alt='instagram icon' width={25} height={25}/></Link>
+            <Link href="https://www.tiktok.com/@rawrisangart"><Image src="/tik-tok.png" alt='tiktok icon' width={25} height={25}/></Link>
+            <Link href="https://www.facebook.com/rawrisang"><Image src="/facebook.png" alt='facebook icon' width={25} height={25}/></Link>
+            <Link href="https://www.linkedin.com/in/rorisang-micheal-monanabela-62ab96138/"><Image src="/LinkedIn.png" alt='LinkedIn icon' width={25} height={25}/></Link>
+          </div>
         </div>
         <div>
-          <form action="">
+          <form action="" className={styles.form}>
             <div className={styles.names}>
               <label htmlFor="name">First Name
                 <input type="text" name='First Name' id='name' required />
@@ -24,12 +31,13 @@ const contact = () => {
                 <input type="text" name='Last Name' id='last name' required />
               </label>
             </div>
-            <label htmlFor="">Email
-            <input type="email"  />
+            <label htmlFor="email" className={styles.label}>Email
+            <input type="email" id='email'  />
             </label>
-            <label htmlFor="">Message
-              <textarea name="message" id="message"></textarea>
+            <label htmlFor="message" className={styles.label}>Message
+              <textarea name="message" id="message" className={styles.message}></textarea>
             </label>
+            <button type='submit' className={styles.button}>SEND</button>
           </form>
         </div>
         
