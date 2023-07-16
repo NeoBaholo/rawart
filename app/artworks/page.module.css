@@ -4,4 +4,57 @@
     margin: 50px 0;
     font-weight: 200;
     font-size: 28px;
+    margin-bottom: 150px;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+    margin-bottom: 180px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.latestDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.latestImage{
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.artworkgroup{
+    margin-top: 80px;
+}
+
+.artworkrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
