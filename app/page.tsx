@@ -2,7 +2,7 @@
 
 
 import Image from 'next/image'
-import Link from 'next/link'
+
 import './globals.css'
 import Masonry from 'react-masonry-css'
 
@@ -93,7 +93,7 @@ export default function Home() {
                 dynamicEl={images.map((image) =>({
                   src: image.src,
                   thumb: image.src,
-                  title: image.src
+                  
                 }))}
             />
       </div>
