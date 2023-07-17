@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import './globals.css'
 import Masonry from 'react-masonry-css'
+import nodeFetch from 'node-fetch'
 
 import type { LightGallery } from 'lightgallery/lightgallery'
 import LightGalleryComponent from 'lightgallery/react';
@@ -23,11 +24,35 @@ import image02 from "public/web.images/image02.jpg"
 import image03 from "public/web.images/image03.jpg"
 import image04 from "public/web.images/image04.jpg"
 import { useRef } from 'react'
+import { GetStaticProps } from 'next'
+import { createApi } from 'unsplash-js'
 
 
-const image = [image01, image02, image03, image04]
 
-export default function Home() {
+
+type HomeProps ={
+  images: {
+    src: string
+  }[]
+};
+
+export const getStaticProps: GetStaticProps<any> =async () => {
+  
+  const unsplash = createApi({
+    accessKey: 'MY_ACCESS_KEY',
+    fetch: nodeFetch as unknown as typeof fetch,
+  });
+
+  const images = [image01, image02, image03, image04]
+
+  return Promise.resolve({
+    props: {
+      images,
+    },
+  })
+}
+
+export default function Home({images}: HomeProps) {
 
   const lightboxRef = useRef<LightGallery | null>(null)
 
@@ -42,10 +67,10 @@ export default function Home() {
             className='flex gap-4' 
             columnClassName=''
           >
-            {image.map((image, idx)=>(
+            {images.map((image, idx)=>(
               <Image
                 key={image.src}
-                src={image}
+                src={images}
                 alt='placeholder'
                 className='my-4 hover:opacity-60 cursor-pointer'
                 placeholder='blur'
@@ -64,7 +89,7 @@ export default function Home() {
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
                 dynamic
-                dynamicEl={image.map((image) =>({
+                dynamicEl={images.map((image) =>({
                   src: image.src,
                   thumb: image.src
                 }))}
