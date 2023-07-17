@@ -5,10 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import './globals.css'
 import Masonry from 'react-masonry-css'
-import nodeFetch from 'node-fetch'
+
 
 import type { LightGallery } from 'lightgallery/lightgallery'
-import LightGalleryComponent from 'lightgallery/react';
+import LightGalleryComponent from 'lightgallery/react'
 
 // import styles
 import 'lightgallery/css/lightgallery.css';
@@ -23,27 +23,26 @@ import image01 from "public/web.images/image01.jpg"
 import image02 from "public/web.images/image02.jpg"
 import image03 from "public/web.images/image03.jpg"
 import image04 from "public/web.images/image04.jpg"
+import image05 from "public/web.images/image05.jpg"
+import image06 from "public/web.images/image06.jpg"
+import image07 from "public/web.images/image07.jpg"
+import image08 from "public/web.images/image08.jpg"
+import image09 from "public/web.images/image09.jpg"
+import image10 from "public/web.images/image10.jpg"
+import image11 from "public/web.images/image11.jpg"
+import image12 from "public/web.images/image12.jpg"
+
+
+
 import { useRef } from 'react'
 import { GetStaticProps } from 'next'
-import { createApi } from 'unsplash-js'
 
 
 
-
-type HomeProps ={
-  images: {
-    src: string
-  }[]
-};
+const images = [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12];
 
 export const getStaticProps: GetStaticProps<any> =async () => {
-  
-  const unsplash = createApi({
-    accessKey: 'MY_ACCESS_KEY',
-    fetch: nodeFetch as unknown as typeof fetch,
-  });
-
-  const images = [image01, image02, image03, image04]
+ 
 
   return Promise.resolve({
     props: {
@@ -52,9 +51,11 @@ export const getStaticProps: GetStaticProps<any> =async () => {
   })
 }
 
-export default function Home({images}: HomeProps) {
+export default function Home() {
 
   const lightboxRef = useRef<LightGallery | null>(null)
+
+  console.log(images);
 
   return (
     <main className="h-full">
@@ -70,7 +71,7 @@ export default function Home({images}: HomeProps) {
             {images.map((image, idx)=>(
               <Image
                 key={image.src}
-                src={images}
+                src={image}
                 alt='placeholder'
                 className='my-4 hover:opacity-60 cursor-pointer'
                 placeholder='blur'
@@ -91,7 +92,8 @@ export default function Home({images}: HomeProps) {
                 dynamic
                 dynamicEl={images.map((image) =>({
                   src: image.src,
-                  thumb: image.src
+                  thumb: image.src,
+                  title: image.src
                 }))}
             />
       </div>

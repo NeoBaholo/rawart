@@ -55,6 +55,8 @@ button{
 
 .heading{
     font-size: 30px;
+    margin-bottom: 150px;
+    
 }
 
 input ::placeholder{
