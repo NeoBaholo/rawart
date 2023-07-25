@@ -1,9 +1,18 @@
+'use client'
+
 import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import ContactForm from './ContactForm'
+
+
+
 
 const contact = () => {
+
+  
+
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
@@ -22,23 +31,7 @@ const contact = () => {
           </div>
         </div>
         <div>
-          <form action="" className={styles.form}>
-            <div className={styles.names}>
-              <label htmlFor="name">First Name
-                <input type="text" name='First Name' id='name' required />
-              </label>
-              <label htmlFor="last name">Last Name
-                <input type="text" name='Last Name' id='last name' required />
-              </label>
-            </div>
-            <label htmlFor="email" className={styles.label}>Email
-            <input type="email" id='email'  />
-            </label>
-            <label htmlFor="message" className={styles.label}>Message
-              <textarea name="message" id="message" className={styles.message}></textarea>
-            </label>
-            <button type='submit' className={styles.button}>SEND</button>
-          </form>
+          <ContactForm/>
         </div>
         
       </div>

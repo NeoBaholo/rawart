@@ -57,5 +57,9 @@
     width: 100%;
     border-radius: 5px;
     margin-top: 30px;
+}
 
+.button :disabled{
+    background: gray;
+    color: gray;
 }
