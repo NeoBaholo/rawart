@@ -1,9 +1,11 @@
+'use client'
 
 import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/navbar/Navbar'
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 const poppins = Poppins({ 
@@ -24,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Navbar/>
-        {children}
+        <ChakraProvider>{children}</ChakraProvider>
         </body>
         <Footer/>
     </html>

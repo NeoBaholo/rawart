@@ -4,6 +4,7 @@
 
 button, [type='button'], [type='reset'], [type='submit'] {
     background-color: hsla(43, 4%, 64%, 1);
+    height: 52px;
 }
 
 @layer{
@@ -50,7 +51,7 @@ label{
 }
 
 button{
-    height: 45px;
+    height: 52px;
 }
 
 .heading{
