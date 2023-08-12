@@ -35,7 +35,7 @@ import image12 from "public/web.images/image12.jpg"
 
 
 import { useRef } from 'react'
-import { GetStaticProps } from 'next'
+
 
 
 
