@@ -41,15 +41,7 @@ import { GetStaticProps } from 'next'
 
 const images = [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12];
 
-export const getStaticProps: GetStaticProps<any> =async () => {
- 
 
-  return Promise.resolve({
-    props: {
-      images,
-    },
-  })
-}
 
 export default function Home() {
 
