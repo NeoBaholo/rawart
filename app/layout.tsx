@@ -27,8 +27,9 @@ export default function RootLayout({
       <body className={poppins.className}>
         <Navbar/>
         <ChakraProvider>{children}</ChakraProvider>
-        </body>
         <Footer/>
+      </body>
+        
     </html>
   )
 }
