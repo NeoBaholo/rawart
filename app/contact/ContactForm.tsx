@@ -4,85 +4,145 @@ import {useState} from "react";
 import styles from './page.module.css'
 import '../globals.css'
 
+import { validationSchema } from "@/utils/validations";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { toFormikValidationSchema } from "zod-formik-adapter";
+
+import { ToastContainer, toast } from "react-toastify";
+
+
+type FormValues = {
+  name: string;
+  lastname: string;
+  email: string;
+  message: string;
+};
+
 export default function ContactForm () {
-  const [loading, setLoading] = useState(false);
-  
-  async function handleSubmit(event: any) {
-    event.preventDefault();
+  const [isLoading, setIsLoading] = useState(false);
 
-    const data = {
-      name: String(event.target.name.value),
-      lastname: String(event.target.lastname.value),
-      email: String(event.target.email.value),
-      message: String(event.target.message.value),
-    };
-
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-      console.log("Message sent successfully");
-      setLoading(false);
-      //reset the form
-      event.target.name.value = "";
-      event.target.lastname.value = "";
-      event.target.email.value = "";
-      event.target.message.value = "";
+  const handleSubmit = async (
+    values: FormValues,
+    {
+      setSubmitting,
+      resetForm,
+    }: {
+      setSubmitting: (isSubmitting: boolean) => void;
+      resetForm: () => void;
     }
-    if (!response.ok) {
-      console.log("Error sending message");
-      setLoading(false);
+  ) => {
+    try {
+      setIsLoading(true);
+      // Send email using Nodemailer
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      // Reset the form
+      resetForm();
+
+      // Show success message or redirect to a thank you page
+      console.log("Email sent successfully!");
+    } catch (error) {
+      // Handle error
+      console.error("Failed to send email:", error);
+    } finally {
+      setSubmitting(false);
+      toast.success("Form submitted successfully!");
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className={styles.names}>
-        <label htmlFor="name" className={styles.label}>Name
-          <input 
-            type="text"
-            required
-            name="name"
-            id="name"
-          />
-        </label>
-        
-        <label htmlFor="lastname" className={styles.label}>Last Name
-          <input 
-            type="text"
-            required
-            name="lastname"
-            id="lastname" 
-          />
-        </label>
-        
-      </div>
-      <div>
-        <label htmlFor="email" className={styles.label}>Email
-          <input 
-            type="email"
-            required
-            name="email"
-            id="email" 
-          />
-        </label>   
-      </div>
-      <div>
-        <label htmlFor="message" className={styles.label}>Message
-          <textarea 
-            required
-            rows={4}
-            name="message"
-            id="message" 
-          />
-        </label>  
-      </div>
-      <button type="submit" disabled={loading} className={styles.button}>SEND</button>
-    </form>
-  )
-}
+    <div>
+      <Formik
+        initialValues={{ name: "", lastname:"", email: "", message: "" }}
+        validationSchema={toFormikValidationSchema(validationSchema)}
+        onSubmit={handleSubmit}
+      >
+
+        <Form>
+          <div className={styles.names}>
+            <label htmlFor="name" className={styles.label}>Name
+              <Field 
+                type="text"
+                required
+                name="name"
+                id="name"
+              />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="text-red-500"
+              />
+            </label>
+            
+            <label htmlFor="lastname" className={styles.label}>Last Name
+              <Field 
+                type="text"
+                required
+                name="lastname"
+                id="lastname" 
+              />
+              <ErrorMessage
+                name="lastname"
+                component="div"
+                className="text-red-500"
+              />
+            </label>
+            
+          </div>
+          <div>
+            <label htmlFor="email" className={styles.label}>Email
+              <Field 
+                type="email"
+                required
+                name="email"
+                id="email" 
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="text-red-500"
+              />
+            </label>   
+          </div>
+          <div>
+            <label htmlFor="message" className={styles.label}>Message
+              <Field 
+                required
+                rows={4}
+                name="message"
+                id="message" 
+                as="textarea"
+              />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className="text-red-500"
+              />
+            </label>  
+          </div>
+          <button type="submit" disabled={isLoading} className={styles.button}>SEND</button>
+        </Form>
+      </Formik>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+    </div>
+    
+  );
+};

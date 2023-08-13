@@ -1,6 +1,7 @@
 
 
 import './globals.css'
+import "react-toastify/dist/ReactToastify.css"
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import Footer from '@/components/footer/Footer'
