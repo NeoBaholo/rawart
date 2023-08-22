@@ -4,7 +4,7 @@ import React, { useRef } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import Artwork from 'public/web.images/image01.jpg'
+import Artwork from 'public/web.images/Live Laugh Love Series.jpg'
 
 
 
@@ -33,17 +33,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image01.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image04.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image03.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -57,17 +57,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image05.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image06.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image07.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -81,17 +81,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image08.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image09.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image10.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -105,17 +105,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image11.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image12.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image13.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -129,17 +129,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image14.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image15.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image16.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -153,17 +153,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image17.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image04.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image03.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -177,17 +177,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image01.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image04.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image03.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -201,17 +201,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image01.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image04.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image03.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                
@@ -225,17 +225,17 @@ const artworks = () => {
         <div className={styles.artworkgroup}>
           <div className={styles.artworkrow} >
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image01.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image04.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>
             <div>
-              <Link href="/" className='flex items-center justify-center w-full'>
+              <Link href="/productDetail" className='flex items-center justify-center w-full'>
                 <Image src='/web.images/image03.jpg' alt='abundance' width={500} height={100} />
               </Link>
             </div>                

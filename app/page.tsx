@@ -19,18 +19,24 @@ import 'lightgallery/css/lg-thumbnail.css'
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import image01 from "public/web.images/image01.jpg"
-import image02 from "public/web.images/image02.jpg"
-import image03 from "public/web.images/image03.jpg"
-import image04 from "public/web.images/image04.jpg"
-import image05 from "public/web.images/image05.jpg"
-import image06 from "public/web.images/image06.jpg"
-import image07 from "public/web.images/image07.jpg"
-import image08 from "public/web.images/image08.jpg"
-import image09 from "public/web.images/image09.jpg"
-import image10 from "public/web.images/image10.jpg"
-import image11 from "public/web.images/image11.jpg"
-import image12 from "public/web.images/image12.jpg"
+import LifeinAbundance from "public/web.images/Life in Abundance.jpg"
+import TheInnerReality from "public/web.images/The Inner Reality.jpg"
+import InnerReality02 from "public/web.images/Inner Reality 02.jpg"
+import ThisLove from "public/web.images/This Love.jpg"
+import ThisLove01 from "public/web.images/This Love 01.jpg"
+import ThisLove02 from "public/web.images/This Love 02.jpg"
+import TheGoldenPerspective from "public/web.images/The Golden Perspective.jpg"
+import TheGoldenPerspective01 from "public/web.images/The Golden Perspective 01.jpg"
+import TheGoldenPerspectiveSeries from "public/web.images/The Golden Perspective Series.jpg"
+import LiveLaughLoveSeries from "public/web.images/Live Laugh Love Series.jpg"
+import LiveLaughLoveSeries01 from "public/web.images/Live Laugh Love Series 01.jpg"
+import LiveLaughLoveSeries02 from "public/web.images/Live Laugh Love Series 02.jpg"
+import LiveLaughLoveSeries03 from "public/web.images/Live Laugh Love Series 03.jpg"
+import LiveLaughLoveSeries04 from "public/web.images/Live Laugh Love Series 04.jpg"
+import LiveLaughLoveSeries05 from "public/web.images/Live Laugh Love Series 05.jpg"
+import LiveLaughLoveSeries06 from "public/web.images/Live Laugh Love Series 06.jpg"
+import LiveLaughLoveSeries07 from "public/web.images/Live Laugh Love Series 07.jpg"
+import LiveLaughLove from "public/web.images/Live Laugh Love.jpg"
 
 
 
@@ -39,7 +45,11 @@ import { useRef } from 'react'
 
 
 
-const images = [image01, image02, image03, image04, image05, image06, image07, image08, image09, image10, image11, image12];
+const images = [LifeinAbundance, TheInnerReality, InnerReality02, ThisLove, ThisLove01, ThisLove02, TheGoldenPerspective, TheGoldenPerspective01, TheGoldenPerspectiveSeries, LiveLaughLoveSeries, LiveLaughLoveSeries01, LiveLaughLoveSeries02,
+  LiveLaughLoveSeries03,LiveLaughLoveSeries04,LiveLaughLoveSeries05,LiveLaughLoveSeries06,LiveLaughLoveSeries07, LiveLaughLove,
+
+
+];
 
 
 
@@ -51,8 +61,8 @@ export default function Home() {
 
   return (
     <main className="h-full">
-      <div className='flex justify-center font-extralight'>
-        <h1 className="heading">GALLERY</h1>
+      <div className='w-full flex xl:flex-row flex-col justify-center max-container'>
+        <h1 className= 'relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28'>GALLERY</h1>
       </div>
       <div className='image-gallery'>
           <Masonry 
