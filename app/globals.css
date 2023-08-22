@@ -57,9 +57,12 @@ button{
 }
 
 .heading{
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    font-weight: 200;
+    font-size: 28px;
     margin-bottom: 150px;
-    
 }
 
 input ::placeholder{

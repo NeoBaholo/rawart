@@ -2,7 +2,6 @@
 
 
 import Image from 'next/image'
-
 import './globals.css'
 import Masonry from 'react-masonry-css'
 
@@ -62,7 +61,7 @@ export default function Home() {
   return (
     <main className="h-full">
       <div className='w-full flex xl:flex-row flex-col justify-center max-container'>
-        <h1 className= 'relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28'>GALLERY</h1>
+        <h1 className="heading" >GALLERY</h1>
       </div>
       <div className='image-gallery'>
           <Masonry 
