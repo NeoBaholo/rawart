@@ -5,19 +5,19 @@ import Artist from 'public/rorisang-01.jpg'
 const ABOUT = () => {
   return (
     <div>
-        <div className={styles.heading}>
+        <div className='flex justify-center mt-12 mb-44 text-3xl font-extralight max-lg:text-lg max-lg:my-7 '>
           <h1>THE ARTIST</h1>
         </div>
-        <div className={styles.container}>
-          <div className={styles.item}>
-            <Image src={Artist} alt='artist' className= {styles.img} />
+        <div className='flex gap-24 m-5 mt-20 max-lg:flex-col max-lg:gap-12'>
+          <div className='flex-1 flex flex-col gap-5'>
+            <Image src={Artist} alt='artist' className= 'w-full h-auto object-cover'/>
           </div>
-          <div className={styles.item}>
-            <h1 className='text-4xl'>
+          <div className='flex-1 flex flex-col gap-5 max-lg:gap-7'>
+            <h1 className='text-4xl max-lg:text-xl'>
               My art is born out of the zeal for perfection both in skill, expression and devotion to create positive changes in the world. 
               I draw inspiration from life experiences and everything that sparks a feeling of necessity.
             </h1>
-            <p className='text-lg flex items-center mt-8'>
+            <p className='text-2xl flex items-center font-light max-lg:text-base'>
             Rorisang Michael Monanabela (b.1995) in Eastern Cape, is currently studying Ar- chitecture at the University of Witwatersrand and graduated from Walter Sisulu University with a Bcom Accounting in 2018. 
             At an age as early as five, Rorisang’s grandmother exposed him to numbers. 
             Nonetheless, his favorite part was using pencils to draw stickmen during his mathematics lessons. 

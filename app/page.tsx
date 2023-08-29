@@ -56,47 +56,57 @@ export default function Home() {
 
   const lightboxRef = useRef<LightGallery | null>(null)
 
+  const breakpointColumnsObj = {
+    default: 2,
+    1100: 2,
+    700: 1,
+    500: 1
+  };
+
   console.log(images);
 
   return (
     <main className="h-full">
-      <div className='w-full flex xl:flex-row flex-col justify-center max-container'>
-        <h1 className="heading" >GALLERY</h1>
+      <div className='flex justify-center mt-12 mb-44 text-3xl font-extralight max-lg:text-lg max-lg:my-7 '>
+        <h1>GALLERY</h1>
       </div>
-      <div className='image-gallery'>
-          <Masonry 
-            breakpointCols={2} 
-            className='flex gap-4' 
-            columnClassName=''
-          >
-            {images.map((image, idx)=>(
+      <div className='max-lg:w-full'>
+        <Masonry 
+          breakpointCols={breakpointColumnsObj} 
+          className='flex gap-4 max-lg:flex-col max-lg:sticky max-lg:w-full '  
+          columnClassName='max-lg:flex max-lg:flex-col max-lg:w-full'
+          
+          
+          
+        >
+          {images.map((image, idx)=>(  
               <Image
                 key={image.src}
                 src={image}
                 alt='placeholder'
-                className='my-4 hover:opacity-60 cursor-pointer'
+                className='my-4 hover:opacity-60 cursor-pointer max-lg:object-cover'
                 placeholder='blur'
                 onClick={() => {
                   lightboxRef.current?.openGallery(idx)
                 }}
-              />
-            ))}
-          </Masonry>
-          <LightGalleryComponent
-                onInit={(ref)=> {
-                  if (ref) {
-                    lightboxRef.current =ref.instance
-                  }
-                }}
-                speed={500}
-                plugins={[lgThumbnail, lgZoom]}
-                dynamic
-                dynamicEl={images.map((image) =>({
-                  src: image.src,
-                  thumb: image.src,
-                  
-                }))}
-            />
+              />  
+          ))}
+        </Masonry>
+        <LightGalleryComponent
+          onInit={(ref)=> {
+            if (ref) {
+              lightboxRef.current =ref.instance
+            }
+          }}
+          speed={500}
+          plugins={[lgThumbnail, lgZoom]}
+          dynamic
+          dynamicEl={images.map((image) =>({
+            src: image.src,
+            thumb: image.src,
+            
+          }))}
+        />
       </div>
     </main>
   )

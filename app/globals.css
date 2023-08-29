@@ -4,13 +4,17 @@
 
 button, [type='button'], [type='reset'], [type='submit'] {
     background-color: hsla(43, 4%, 64%, 1);
-    height: 52px;
+    height: 45px;
 }
 
 @layer{
     html{
         color: #727272;
+        width: 100%;
         padding: 35px;
+        
+        @media not all and (min-width:1024px) {padding:20px;  margin:0px;}
+        
         
     }
     
@@ -37,7 +41,7 @@ input{
     width: 100%;
     border-radius: 5px;
     height: 45px;
-    margin-top: 5px;
+    
 }
 
 textarea{
