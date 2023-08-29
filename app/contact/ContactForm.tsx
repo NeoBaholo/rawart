@@ -34,7 +34,7 @@ export default function ContactForm () {
     try {
       setIsLoading(true);
       // Send email using Nodemailer
-      await fetch("/api/contact", {
+      await fetch("../api.contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
