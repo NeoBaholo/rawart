@@ -11,5 +11,8 @@ export const transporter = nodemailer.createTransport(
       user: smtpEmail,
       pass: smtpPassword,
     },
+    tls: {
+      rejectUnauthorized: false
+    },
   })
 );
